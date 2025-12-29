@@ -1,0 +1,1 @@
+关于QKQ范式，我们看RW_qkq_contDiff.py和QKQ_Walker_contDiff.py部分，而RW_qkq_noDiff是没有权重部分，相当于消融的文件，这样先看random walk(RW, QKQ)，再看word2vec

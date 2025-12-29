@@ -1,0 +1,15 @@
+ques_diff.csv题目难度QKQ 元路径中边 ($Q-K$) 的权重来源
+ques_disc.csv 对定义6原始值进行离散化，打标签方便后续采样
+ques_discvalue.csv 通过定义6得到的原始值
+ques_skill.csv Q-K关系
+ques_skill_mat.npy  仅仅是Q-K关系的邻接矩阵，更方便后续操作
+skill_var.csv技能细粒度，技能节点属性
+stu_cluster_120.csv  辅助节点生成（Auxiliary Node Generation）。它建立了 U-C_U的关系
+stu_skill 主要是生成矩阵方便后续聚类生成学生群体，stu_skill_mat.npy，K-Means 聚类，利用这个矩阵把学生分成 120 类，生成 stu_cluster_120.csv
+stu_ques 只用了前三列 学生id 问题id 作答结果correct
+stu_ability_w 定义7带问题难度这个权重的原始计算结果 stu_abi不带问题难度这个权重的原始计算结果
+stu_ability是跟ques_discvalue类似的操作，对原始数据进行离散化，通过分段函数
+
+stuability加权版本 (stu_abi_w.csv $\rightarrow$ stu_ability_w.csv) —— 推荐使用等级 1 (最低 16.7%): $[-0.211, -0.004]$等级 2: $(-0.004, 0.003]$等级 3: $(0.003, 0.006]$等级 4: $(0.006, 0.015]$等级 5: $(0.015, 0.037]$等级 6 (最高 16.7%): $(0.037, 0.338]$
+
+ques disc等级 0 (Low): $Disc \le 0.2$范围：$[-0.818, 0.200]$含义：区分度低，甚至为负。等级 1 (Medium): $0.2 < Disc < 0.3$范围：$(0.200, 0.299]$含义：区分度中等。等级 2 (High): $0.3 \le Disc \le 0.4$范围：$[0.300, 0.400]$含义：区分度较高。等级 3 (Very High): $Disc > 0.4$范围：$(0.400, 1.000]$含义：区分度极高。

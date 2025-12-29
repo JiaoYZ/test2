@@ -1,0 +1,1 @@
+pre_emb是预训练内容，而simkt是主模型，result是运行结果 param是模型参数  final_emb是预训练最终嵌入 用于下游微调

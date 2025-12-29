@@ -1,0 +1,1 @@
+train系列的用于训练模型，防止数据泄露，train question或skill每三行一份  分别是作答长度， 问题id或技能id 作答结果， trainuser为训练集的学生id  test前缀的与之类似
